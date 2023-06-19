@@ -13,13 +13,7 @@ node {
        sh 'docker run -p 3000:3000 -d ashithss/assign2'
     }
 
-    stage('Test Image') {
   
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
 
     stage('Push Image') {
         
