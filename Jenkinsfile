@@ -26,8 +26,6 @@ node {
             app.push("${env.BUILD_NUMBER}")
         }
     }
-    stage('Run Container') {
-       docker run -p 3000:3000 -d ashishss/assign2
-    }
+    
        
 }
