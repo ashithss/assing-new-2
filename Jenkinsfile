@@ -10,7 +10,7 @@ node {
     stage('Build Image') {
   
        app = docker.build("ashithss/assign2")
-       sh 'docker run -d  -p 3000:3000 ashithss/assign2:latest'
+       sh 'docker run -d --name=img2 -p 3000:3000 ashithss/agency_website:latest'
     }
 
   
