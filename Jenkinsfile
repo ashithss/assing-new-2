@@ -9,7 +9,8 @@ node {
 
     stage('Build Image') {
   
-       app = docker.build("ashithss/assign2").withRun(' -p 3000:3000')
+       app = docker.build("ashithss/assign2")
+       sh 'docker run -p 3000:3000 -d ashithss/assign2'
     }
 
     stage('Test Image') {
